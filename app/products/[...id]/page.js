@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const dynamic = 'force-dynamic';
 
 const Productpage = async ({ params }) => {
-  const { id } = params;
+  const { id } = await params;
   const productId = Array.isArray(id) ? id.at(-1) : id;
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/${productId}`);
   const product = await response.json();
