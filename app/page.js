@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import Logout from "./lib/component/Logout/Logout";
 
 
 export default async function Home() {
@@ -11,11 +11,14 @@ export default async function Home() {
     <>
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-black py-10">
         <div className="container mx-auto px-4">
+          <div className="flex justify-between">
           <h1 className="text-5xl font-extrabold text-white mb-12 text-center drop-shadow-2xl tracking-widest">
             <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
               Product Gallery
             </span>
           </h1>
+          <Logout/>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {data.map((product) => (
               <div
