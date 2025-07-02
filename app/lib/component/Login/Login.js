@@ -28,6 +28,9 @@ const Login = () => {
     if (response.ok){
         router.push('/')
     }
+    else {
+        alert(data.error || 'Login failed. Please try again.')
+    }
   }
   
   return (
